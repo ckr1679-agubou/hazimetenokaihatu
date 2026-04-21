@@ -10,7 +10,21 @@
 - ローカル保存（LocalStorage）
 
 ## 起動方法
-`index.html` をブラウザで開いてください。
+### 1) そのまま開く
+`index.html` をChromeで開いてください。
+
+### 2) 開発用サーバーで開く（推奨）
+```bash
+python -m http.server 8000
+```
+`http://localhost:8000/index.html` にアクセスします。
+
+## ソース一式を保存する（ZIP化）
+このリポジトリ全体をZIPで保存する場合:
+```bash
+cd /workspace
+zip -r fx-trade-recorder-source.zip hazimetenokaihatu -x 'hazimetenokaihatu/.git/*'
+```
 
 ## 今後の拡張候補
 - CSV対応

@@ -21,13 +21,22 @@ export function exportTrades(trades) {
   const a = document.createElement("a");
   a.href = url;
   a.download = `fx-trades-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
   a.click();
+  a.remove();
   URL.revokeObjectURL(url);
+}
+
+function sortByDateDesc(a, b) {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
 export async function importTrades(file) {
   const text = await file.text();
   const parsed = JSON.parse(text);
-  if (!Array.isArray(parsed)) throw new Error("JSON配列形式ではありません");
-  return parsed;
+  if (!Array.isArray(parsed)) {
+    throw new Error("JSON配列形式ではありません");
+  }
+
+  return parsed.sort(sortByDateDesc);
 }
