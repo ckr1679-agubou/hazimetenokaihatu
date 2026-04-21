@@ -1,0 +1,9 @@
+{
+  "name": "為替トレード記録ツール",
+  "short_name": "FX記録",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#1f2937",
+  "icons": []
+}

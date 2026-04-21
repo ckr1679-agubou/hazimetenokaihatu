@@ -1,0 +1,14 @@
+[
+  {
+    "id": "sample-1",
+    "date": "2026-04-21T09:10",
+    "pair": "USD/JPY",
+    "side": "buy",
+    "size": 0.1,
+    "entry": 155.2,
+    "exit": 155.35,
+    "fee": 0,
+    "swap": 0,
+    "note": "サンプル取引"
+  }
+]
